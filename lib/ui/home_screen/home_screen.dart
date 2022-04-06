@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:greenart_task/components/styles.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,32 +21,15 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CircleAvatar(
-                  radius: 20,
-                  backgroundColor: const Color(0XFF4F4F4F),
-                  child: CircleAvatar(
-                    backgroundColor: Colors.black,
-                    radius: 16,
-                    child: IconButton(
-                      icon: const Icon(
-                        Icons.arrow_back_ios,
-                        size: 22,
-                        color: Color(0XFF4F4F4F),
-                      ),
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                  ),
-                ),
-                IconButton(
-                  icon: const Icon(
-                    Icons.menu,
-                    size: 30,
-                    color: Color(0XFF4F4F4F),
-                  ),
-                  onPressed: () {},
-                ),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                    child: SvgPicture.asset('images/Arrow   Right Circle.svg')),
+               GestureDetector(
+                   onTap: (){
+                   },
+                   child: SvgPicture.asset('images/Group 5.svg')),
               ],
             ),
             Row(
@@ -125,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           },
                           icon: const Icon(
                             Icons.arrow_back_ios,
-                            size: 30,
+                            size: 35,
                             color: Color(0XFFF2C94C),
                           )),
                       IconButton(
@@ -134,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           },
                           icon: const Icon(
                             Icons.arrow_forward_ios,
-                            size: 30,
+                            size: 35,
                             color: Color(0XFFF2C94C),
                           )),
                     ],
@@ -183,8 +167,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 33, right: 76.5),
-                    child: Image.asset(
-                      'images/support.png',
+                    child: SvgPicture.asset(
+                      'images/Support.svg',
                       width: 30,
                       height: 30,
                     ),
@@ -208,8 +192,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 33, right: 76.5),
-                    child: Image.asset(
-                      'images/accident.png',
+                    child:SvgPicture.asset(
+                      'images/Plus.svg',
                       width: 30,
                       height: 30,
                     ),
@@ -233,8 +217,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 33, right: 76.5),
-                    child: Image.asset(
-                      'images/support2.png',
+                    child:  SvgPicture.asset(
+                      'images/Support.svg',
                       width: 30,
                       height: 30,
                     ),
